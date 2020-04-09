@@ -10,9 +10,9 @@
 
 .sinistra{
     height: 100%;
-    width: 15%;
+    width: 20%;
     background-color: black;
-    padding: 16px;
+    padding: 20px 0;
     float: left;
     display: flex;
     flex-direction: column;
@@ -22,18 +22,67 @@
 .sinistra a{
     list-style-type: none;
     text-decoration: none;
+    padding: 10px 5px;
     color: white;
+    display: block;
 }
 
+.sinistra li{
+    border-left:5px solid black;
+}
+
+.sinistra li:first-child{
+    border-left:5px solid green;
+}
+
+.sinistra i{
+    padding-right: 5px;
+    display:inline-block;
+}
+
+.top-mobile{
+    display: none;
+}
+
+.bottom-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
+    .a-top{
+        display: none;
+    }
+
+    .top-mobile{
+        display:block;
+    }
+
+    .a-bottom{
+        display: none;
+    }
+
+    .bottom-mobile{
+        display: block;
+    }
+}
 /*fine aside*/
 
 .destra{
     height: 100%;
-    width: 85%;
+    width: 80%;
     background-color: yellow;
-    padding: 10px 30px 0 30px;
+    padding: 20px 10% 0 10%;
     float: right;
     text-align: center;
+    overflow-y: scroll;
+}
+
+.menu{
+    display: block;
+}
+
+.button{
+    display:none;
 }
 
 .destra ul,
@@ -45,19 +94,45 @@
 .destra a{
     list-style-type: none;
     text-decoration: none;
-    padding: 5px;
+    padding: 10px;
     color: #b3b3b3;
+}
+
+.destra h2{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px 0px;
+    text-align: left;
+}
+
+.destra p{
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .album{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .brano img{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+@media screen and (max-width: 770px) {
+    .destra{
+        padding: 20px 5% 0 5%;
+    }
+
+    .button{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
 }
 /*fine section*/
 
@@ -73,21 +148,33 @@
     width: 20%;
     background-color: green;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .f-sinistra img{
-    height: 100%;
+    height: 80%;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .f-centro{
     background-color: orange;
+    text-align: center;
     flex-grow: 1;
+}
+
+.f-centro i{
+    padding: 10px;
 }
 
 .f-destra{
     width: 15%;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
